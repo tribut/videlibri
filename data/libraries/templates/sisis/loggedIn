@@ -93,6 +93,7 @@ touchpoint := get('touchpoint', false())
               <span>{$book.status}</span>
             </a>
             <span template:optional="true">{$book.status}</span>
+            <span template:optional="true">{$book.status := concat($book.status, " ", .)}</span>*
             <a template:optional="true">
               {book.actionURI := resolve-html(.),
                book.cancelable := $mode eq 3
